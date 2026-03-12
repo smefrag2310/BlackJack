@@ -2,9 +2,9 @@ package blackjack.dominio;
 
 public class Carta {
 	private TipoCarta carta;
-	private TipoPalo palo;
+	private Palo palo;
 	
-	public Carta(TipoCarta carta, TipoPalo palo) {
+	public Carta(TipoCarta carta, Palo palo) {
 		this.carta=carta;
 		this.palo=palo;
 		}
