@@ -10,7 +10,7 @@ public enum TipoCarta {
 	 * <li>El AS vale inicialmente 11.</li>
 	 * </ul>
 	 * * @author RGONCASR723
-	 * @version 1.0
+	 * 
 	 */
 
 	AS(11), DOS(2), TRES(3), CUATRO(4), CINCO(5), SEIS(6), SIETE(7), OCHO(8), NUEVE(9), DIEZ(10), J(10), K(10), Q(10);
