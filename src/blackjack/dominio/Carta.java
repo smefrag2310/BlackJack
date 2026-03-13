@@ -9,7 +9,7 @@ public class Carta {
 	 * 
 	 */
 	private TipoCarta Tipocarta;
-	private TipoPalo palo;
+	private Palo palo;
 
 	/**
 	 * Crea una nueva carta con el tipo y palo especificados.
@@ -17,7 +17,7 @@ public class Carta {
 	 * @param tipoCarta El tipo de carta (valor o figura).
 	 * @param palo      El palo de la baraja.
 	 */
-	public Carta(TipoCarta Tipocarta, TipoPalo palo) {
+	public Carta(TipoCarta Tipocarta, Palo palo) {
 		this.Tipocarta = Tipocarta;
 		this.palo = palo;
 	}
