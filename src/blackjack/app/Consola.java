@@ -78,10 +78,42 @@ public class Consola {
 	
 	public void menuPartida() {
 		escribirLinea("""
+				
 				===== BlackJack =====
 				1) Jugar 
 				2) Salir 
 				""");
+	}
+	
+	public char readChar() {
+		String input;
+		do {
+			input = sc.next();
+			if (input.trim().length() != 1) {
+				System.out.println("**Cadena inválida** Por favor, introduce un único carácter: ");
+			}
+		} while (input.length() != 1);
+		sc.nextLine();
+		return input.charAt(0);
+	}
+	
+	public boolean readBooleanUsingChar(char affirmativeValue, char negativeValue) {
+		char input;
+		boolean character;
+		character = true;
+
+		do {
+			input = readChar();
+			if (Character.toLowerCase(input) == Character.toLowerCase(affirmativeValue)) {
+				character = true;
+			} else if (Character.toLowerCase(input) == Character.toLowerCase(negativeValue)) {
+				character = false;
+			} else {
+				System.out.printf("**Carácter inválido** Introduce %s o %s para continuar: ", affirmativeValue,
+						negativeValue);
+			}
+		} while (input != affirmativeValue && input != negativeValue);
+		return character;
 	}
 	
 	public void vaciarConsola() {

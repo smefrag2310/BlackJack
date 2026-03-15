@@ -26,11 +26,16 @@ public class Jugador {
 		mano.añadirCarta(carta);
 	}
 	
-	public int puntuación() {
+	public int puntuacion() {
 		return mano.calcularPuntuacion();
 	}
 	
 	public boolean estaPasado() {
 		return mano.estaPasado();
+	}
+	
+	@Override
+	public String toString() {
+		return String.format("%s: %s \t%s",apodo,mano.toString(),estaPasado()? "(SE HA PASADO)":"");
 	}
 }
