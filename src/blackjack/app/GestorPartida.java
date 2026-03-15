@@ -87,10 +87,17 @@ public class GestorPartida {
 	 */
 	public void decisiones() {
 		boolean decision1,decision2;
+		decision1=false;
+		decision2=false;
+		
+		if(!plantado1) {
 		System.out.printf("%s,¿quieres carta (C) o plantarte (P)?: \n",jugador1.getApodo());
 		decision1= leerOpcionRonda();
+		}
+		if(!plantado2) {
 		System.out.printf("%s,¿quieres carta (C) o plantarte (P)?: \n",jugador2.getApodo());
 		decision2= leerOpcionRonda();
+		}
 		consola.escribir("\n(Reparto de cartas de la ronda...)\n");
 		
 		repartoRonda(decision1,decision2);
