@@ -160,9 +160,10 @@ public class Consola {
 
 		do {
 			input = readChar();
-			if (Character.toLowerCase(input) == Character.toLowerCase(affirmativeValue)) {
+			input= Character.toLowerCase(input);
+			if (input == Character.toLowerCase(affirmativeValue)) {
 				character = true;
-			} else if (Character.toLowerCase(input) == Character.toLowerCase(negativeValue)) {
+			} else if (input == Character.toLowerCase(negativeValue)) {
 				character = false;
 			} else {
 				System.out.printf("**Carácter inválido** Introduce %s o %s para continuar: ", affirmativeValue,
